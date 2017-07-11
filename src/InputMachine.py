@@ -6,10 +6,9 @@ class InputMachine:
 		pass
 
 	def getAllInput(self):
-		filename = self.getFileName()
-		return filename
+		pass
 
-	def getFileName(self):
+	def getFilename(self):
 		pass
 
 	def peak(self):

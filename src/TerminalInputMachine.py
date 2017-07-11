@@ -6,7 +6,7 @@ from InputMachine import *
 
 class TerminalInputMachine(InputMachine):
 
-	def getFileName(self):
+	def getFilename(self):
 		print ("Welcome to the Statistic Machine!")
 		filename = input ("What file do you want to analyze? - ")
 		print ("\nThe file to be analyzed: {}\n".format(filename))

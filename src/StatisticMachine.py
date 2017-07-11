@@ -3,16 +3,18 @@ import sys
 import os
 from InputMachine import *
 from TerminalInputMachine import *
-from model import *
+from DataModel import *
+
 
 peak_number = 5
 
 def start():
 	input_machine = TerminalInputMachine()
-	filename = input_machine.getAllInput()
-	loadDataFrame(filename)
-	df = getDataFrame()
-	input_machine.peak(df, peak_number)
+	model = DataModel()
+	filename = input_machine.getFilename()
+	model.loadDataFrame(filename)
+
+
 
 
 start()
