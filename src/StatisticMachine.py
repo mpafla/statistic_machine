@@ -1,20 +1,11 @@
-import random
-import sys 
-import os
-from InputMachine import *
-from TerminalInputMachine import *
-from DataModel import *
+from views.InputTerminalView import *
+from models.DataModel import *
+from controller.InputController import *
 
-
-peak_number = 5
 
 def start():
-	input_machine = TerminalInputMachine()
+	input_view = InputTerminalView()
+	input_controller = InputController(input_view)
 	model = DataModel()
-	filename = input_machine.getFilename()
-	model.loadDataFrame(filename)
-
-
-
 
 start()

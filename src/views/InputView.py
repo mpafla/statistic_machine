@@ -1,6 +1,6 @@
 
 
-class InputMachine:
+class InputView:
 
 	def __init__(self):
 		pass
