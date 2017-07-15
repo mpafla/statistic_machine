@@ -1,6 +1,3 @@
-import random
-import sys 
-import os
 from r_functions.showHead import showHead
 from views.InputView import *
 
@@ -12,4 +9,6 @@ class InputTerminalView(InputView):
 		print ("\nThe file to be analyzed: {}\n".format(filename))
 		return filename
 
-
+	def error(self, error):
+		if (error == "loadDataFrame"):
+			print("Data frame could not be loaded")
