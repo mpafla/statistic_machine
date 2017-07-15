@@ -9,6 +9,3 @@ class InputTerminalView(InputView):
 		print ("\nThe file to be analyzed: {}\n".format(filename))
 		return filename
 
-	def error(self, error):
-		if (error == "loadDataFrame"):
-			print("Data frame could not be loaded")

@@ -5,5 +5,5 @@ from rpy2.robjects.vectors import DataFrame
 
 r = robjects.r
 
-def showHead(df, number):
-	print(r.head(df, number))
+def showHead(model, number):
+	print(r.head(model.getDataFrame(), number))
