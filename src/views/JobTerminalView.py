@@ -1,4 +1,7 @@
-from r_functions.getColumns import *
+from r_functions.getColumnNames import *
+from r_functions.getLengthOfObject import *
+from helpers.getInputNumber import *
+from helpers.printOptions import *
 
 class JobTerminalView:
 
@@ -19,9 +22,12 @@ class JobTerminalView:
 				job_type = self.job_dict[int(key)]
 				return job_type
 
-	def getIndependentVariable(self, model):
-		getColumns(model)
-		print("What should be your independent variable?")
+	def getVariable(self, model, question):
+		colnames = getColumnNames(model)
+		number_of_colnames = getLengthOfObject(colnames)
+		print (question)
+		printOptions(colnames, "for column")
+		return getInputNumber(0, number_of_colnames - 1, "Pick a number for a column: ")
 
-	def getDependentVariable(self, model):
-		pass
+
+	
